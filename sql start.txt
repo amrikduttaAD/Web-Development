@@ -1,0 +1,25 @@
+--INT                 --WHOLE NUMBERS
+--DECIMAL(M,N)        --DECIMAL NUMBERS - exact value
+--VARCHAR(1)          --string of text of length 1
+--BLOB                --binary large object,stores large data
+--DATE                --'YYYY-MM-DD'
+--TIMESTAMP()         --'YYYY-MM-DD HH:MM:SS'  - used for recording
+--primary key(student_id) we can also define the primary key later
+
+create table student(
+    student_id int primary key, 
+    name varchar(20),
+    major varchar(20)
+   
+
+);
+describe student;  --it basically describes the table
+
+select * from student;  --this actually shows the data
+--drop table student;  --it basically deletes the table
+--alter table student drop column gpa;  --> it deletes a specific column
+
+--alter table student add gpa decimal(3,2);
+
+INSERT INTO student VALUES(2, 'mahedi' , 'cse', 0.02); -- this actually adds data
+INSERT into student(student_id, name) values(3,'hahah');  -- in this case if some data is missing and we still want to add then this
